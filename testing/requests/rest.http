@@ -1,14 +1,27 @@
 ############################################################
-@local = https://localhost:6999
+@local = https://localhost:7000
 @deploy = https://
 
 ############################################################
 ### local test requests
-POST {{local}}/route
+POST {{local}}/getABI
 content-type: application/json
 
 {
+    "authCode": "deadbeef",
+    "address": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c"
 }
+
+
+### local test requests
+POST {{local}}/getABI
+content-type: application/json
+
+{
+    "authCode": "deadbeef",
+    "address": "0x5c872500c00565505f3624ab435c222e558e9ff8"
+}
+
 
 ############################################################
 ### deployment requests

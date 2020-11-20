@@ -1,5 +1,5 @@
 server{
-    listen  6999  ssl;
+    listen  7000  ssl;
     server_name localhost;
 
     ssl_certificate  ssl/cert.pem;
