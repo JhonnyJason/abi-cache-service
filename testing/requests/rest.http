@@ -1,6 +1,6 @@
 ############################################################
 @local = https://localhost:7000
-@deploy = https://
+@deploy = https://abi-cache.extensivlyon.coffee
 
 ############################################################
 ### local test requests
@@ -24,9 +24,11 @@ content-type: application/json
 
 
 ############################################################
-### deployment requests
-POST {{deploy}}/route
+### deploy test request
+POST {{deploy}}/getABI
 content-type: application/json
 
 {
+    "authCode": "deadbeef",
+    "address": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c"
 }
